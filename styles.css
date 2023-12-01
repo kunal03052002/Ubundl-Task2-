@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: skyblue;
+    background: url('https://c4.wallpaperflare.com/wallpaper/226/838/327/chocolate-brown-food-sweet-wallpaper-preview.jpg');
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: burlywood;
+    opacity: 2.8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure the blur effect doesn't overflow */
+    
+    
+
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1.8;
+    /* background: url('https://w0.peakpx.com/wallpaper/686/823/HD-wallpaper-sweet-collage-cool-chocolates-fun-collage-abstract-sweet-thumbnail.jpg'); */
+    filter: blur(50%); /* Adjust the blur strength */
+    z-index: -1; /* Place the overlay behind the container content */
+}
+
+h1 {
+    color: #333;
+}
+
+#chocolate-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chocolate-option {
+    border: 2px solid #e0e0e0;
+    padding: 15px;
+    margin: 15px;
+    cursor: pointer;
+    flex-basis: calc(33.33% - 30px);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.chocolate-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.chocolate-option label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#selected-chocolates {
+    margin-top: 30px;
+}
+
+#selected-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#selected-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+/* @media screen and (max-width: 600px) {
+    .chocolate-option {
+        flex-basis: calc(50% - 30px);
+    }
+} */
+@media screen and (max-width: 600px) {
+    .chocolate-option {
+        flex-basis: calc(50% - 30px);
+    }
+}
